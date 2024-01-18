@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Start</h1>
+    <div id="root">
+      <h1>Hello</h1>
+    </div>
+    <h1>End</h1>
+
+    <!-- <div id="parent">
+        <p id="child1">child1</p>
+        <p id="child2">child2</p>
+    </div> -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script>
+      const heading1 = React.createElement("div", { id: "parent" }, [
+        React.createElement("p", { id: "child1" }, "Child1"),
+        React.createElement("p", { id: "child2" }, "Child2"),
+      ]);
+
+      console.log(heading2); // React.createElement end of day is javascript object
+
+      const roots = ReactDOM.createRoot(document.getElementById("root")); // ReactDOM manipulate dom related thing
+
+      roots.render(heading2); // root.render convert this javascript react object is html and replaced the entire
+      // contain of targeting parent child to this object
+    </script>
+
+    <script>
+      const heading = document.createElement("h1"); // <h1></h1>
+      heading.innerHTML = "Hello How Are You Man";
+      const root = document.getElementById("root");
+      root.appendChild(heading);
+    </script>
+  </body>
+</html>
